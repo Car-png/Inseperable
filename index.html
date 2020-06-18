@@ -10,7 +10,25 @@
 <body>
       <div class="container">
             <div class="circle circle1"></div>
-            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
       </div>
+
+      <svg>
+            <filter id="gooey">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10"/>
+                  <feColorMatrix values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 20 -10"/>
+            </filter>
+      </svg>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+            $(function(){
+                  $('.circle').draggable();
+            });
+      </script>
 </body>
 </html>
